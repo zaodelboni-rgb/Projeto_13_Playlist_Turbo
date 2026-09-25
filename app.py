@@ -2,16 +2,16 @@ import streamlit as st
 import pandas as pd
 
 ### 1. Leia o Arquivo Dados_Artistas.csv e o Transforme em dataframe
-
+df =pd.read_parquet('Dados_Artistas.parquet')
 
 ### 2. Coloque um titulo na pagina
-
-
+st.title('Delboni Strawberry')
 ### 3. Coloque subtitulo titulo na pagina
 
+st.subheader('Apenas sinta a emoção da musica!')
 
 ### 4. Coloque uma logo na sidebar(barra lateral)
-
+st.sidebar.image('image.png')
 
 ### 5. Não mexa abaixo, estamos criando uma selectbox, para selecionar o artista
 artistas = st.sidebar.selectbox('Selecione o Artista', df['Artist'].unique())
